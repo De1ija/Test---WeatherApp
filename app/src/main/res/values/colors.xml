@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0279b1</color>
+    <color name="colorPrimaryDark">#014565</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBackground">#03A9F4</color>
+
+
+    <color name="tempColor">#ffcc00</color>
+
+    <color name="primaryText">#B3E5FC</color>
+
+    <color name="background">#0279b1</color>
+    <color name="detail_accent_label">#90A4AE</color>
+</resources>

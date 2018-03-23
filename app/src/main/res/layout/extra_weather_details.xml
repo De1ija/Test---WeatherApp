@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/extra_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:paddingBottom="4dp"
+            android:paddingEnd="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingStart="32dp"
+            android:paddingTop="4dp">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/horizontal_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <TextView
+                android:id="@+id/humidity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity:"
+                style="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintBottom_toTopOf="@+id/pressure_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/humidity_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/tempColor"
+                app:layout_constraintBottom_toBottomOf="@+id/humidity_label"
+                app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+                tools:text="30%"/>
+
+            <TextView
+                android:id="@+id/pressure_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Pressure:" />
+
+            <TextView
+                android:id="@+id/pressure_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/tempColor"
+                app:layout_constraintBottom_toBottomOf="@+id/pressure_label"
+                app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+                tools:text="995hPa" />
+
+            <TextView
+                android:id="@+id/windspeed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:text="Wind:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pressure_label" />
+
+            <TextView
+                android:id="@+id/windspeed_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/tempColor"
+                app:layout_constraintBottom_toBottomOf="@+id/windspeed_label"
+                app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+                tools:text="4m/s NE" />
+
+    <!--        <Button
+                android:id="@+id/forecast_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Forecast"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />-->
+
+        </android.support.constraint.ConstraintLayout>
+</layout>

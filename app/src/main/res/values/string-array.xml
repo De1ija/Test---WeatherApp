@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_list">
+        <item>Amsterdam</item>
+        <item>Andorra la Vella</item>
+        <item>Ankara</item>
+        <item>Astana</item>
+        <item>Athens</item>
+        <item>Baku</item>
+        <item>Belgrade</item>
+        <item>Berlin</item>
+        <item>Bern</item>
+        <item>Bratislava</item>
+        <item>Brussels</item>
+        <item>Bucharest</item>
+        <item>Budapest</item>
+        <item>Chisinau</item>
+        <item>Copenhagen</item>
+        <item>Dublin</item>
+        <item>Helsinki</item>
+        <item>Kiev</item>
+        <item>Lisbon</item>
+        <item>Ljubljana</item>
+        <item>London</item>
+        <item>Luxembourg</item>
+        <item>Madrid</item>
+        <item>Minsk</item>
+        <item>Monaco</item>
+        <item>Moscow</item>
+        <item>Nicosia</item>
+        <item>Paris</item>
+        <item>Podgorica</item>
+        <item>Prague</item>
+        <item>Reykjavik</item>
+        <item>Riga</item>
+        <item>Rome</item>
+        <item>Oslo</item>
+        <item>San Marino</item>
+        <item>Sarajevo</item>
+        <item>Skopje</item>
+        <item>Sofia</item>
+        <item>Stockholm</item>
+        <item>Tallinn</item>
+        <item>Tbilisi</item>
+        <item>Tirana</item>
+        <item>Vaduz</item>
+        <item>Valetta</item>
+        <item>Vatican City</item>
+        <item>Vienna</item>
+        <item>Vilnius</item>
+        <item>Warsaw</item>
+        <item>Yerevan</item>
+        <item>Zagreb</item>
+    </string-array>
+</resources>

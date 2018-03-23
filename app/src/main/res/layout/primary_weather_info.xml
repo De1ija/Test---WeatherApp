@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/primary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground">
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <ImageView
+            android:id="@+id/icon_id_imageview"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/art_clouds" />
+
+        <TextView
+            android:id="@+id/cityName_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/icon_id_imageview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="Belgrade" />
+
+        <TextView
+            android:id="@+id/weather_description_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tempColor"
+            android:textSize="16sp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/icon_id_imageview"
+            app:layout_constraintStart_toStartOf="@+id/icon_id_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/icon_id_imageview"
+            tools:text="light intensity shower rain" />
+
+        <TextView
+            android:id="@+id/temperature_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/tempColor"
+            android:textSize="72sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/icon_id_imageview"
+            tools:text="19\u00b0" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
