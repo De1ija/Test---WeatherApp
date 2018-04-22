@@ -1,8 +1,8 @@
-package com.example.android.weatherapp;
+package com.example.android.weatherapp.utils;
 
 
 
-public class cityWeather {
+public class CityWeather {
 
     private String mCityName;
     private int mTemperature;
@@ -16,7 +16,7 @@ public class cityWeather {
     private String mDate;
 
 
-    public cityWeather(String cityName, int temperature, int pressure, int humidity, double windSpeed,
+    public CityWeather(String cityName, int temperature, int pressure, int humidity, double windSpeed,
                        double windDirection, int iconId, String weatherDescription){
         mCityName = cityName;
         mTemperature = temperature;
@@ -28,7 +28,7 @@ public class cityWeather {
         mWeatherDescription = weatherDescription;
     }
 
-    public cityWeather(int temperature, int iconId, String weatherDescription, String date){
+    public CityWeather(int temperature, int iconId, String weatherDescription, String date){
         mTemperature = temperature;
         mIconId = iconId;
         mWeatherDescription = weatherDescription;

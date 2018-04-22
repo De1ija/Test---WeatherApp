@@ -1,13 +1,15 @@
-package com.example.android.weatherapp;
+package com.example.android.weatherapp.loaders;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.util.Log;
+
+import com.example.android.weatherapp.utils.CityWeather;
+import com.example.android.weatherapp.utils.QueryUtils;
 
 import java.util.List;
 
 
-public class ForecastLoader extends AsyncTaskLoader<List<cityWeather>> {
+public class ForecastLoader extends AsyncTaskLoader<List<CityWeather>> {
 
     private String mUrl;
 
@@ -22,8 +24,8 @@ public class ForecastLoader extends AsyncTaskLoader<List<cityWeather>> {
     }
 
     @Override
-    public List<cityWeather> loadInBackground() {
-        List<cityWeather> forecastWeather = QueryUtils.fetchForecastData(mUrl);
+    public List<CityWeather> loadInBackground() {
+        List<CityWeather> forecastWeather = QueryUtils.fetchForecastData(mUrl);
         return forecastWeather;
     }
 }

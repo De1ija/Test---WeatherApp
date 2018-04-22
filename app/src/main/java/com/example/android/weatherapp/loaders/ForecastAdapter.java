@@ -1,4 +1,4 @@
-package com.example.android.weatherapp;
+package com.example.android.weatherapp.loaders;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.android.weatherapp.R;
+import com.example.android.weatherapp.utils.CityWeather;
+import com.example.android.weatherapp.utils.WeatherUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +21,9 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     private static final String TAG = "ForecastAdapter";
     private final Context mContext;
-    public  List<cityWeather> mForecast;
+    private  List<CityWeather> mForecast;
 
-    public ForecastAdapter (Context context, List<cityWeather> forecast){
+    public ForecastAdapter (Context context, List<CityWeather> forecast){
         mContext = context;
         mForecast = forecast;
     }
@@ -35,17 +37,17 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     @Override
     public void onBindViewHolder(ForecastAdapterViewHolder holder, int position) {
 
-        cityWeather forecast = mForecast.get(position);
+        CityWeather forecast = mForecast.get(position);
 
         holder.iconView.setImageResource(WeatherUtils.getIconForWeatherCondition(forecast.getIconId()));
         holder.dateView.setText(forecast.getDate());
         holder.descriptionView.setText(forecast.getWeatherDescription());
         String temp = String.valueOf(forecast.getTemperature()+"\u00b0");
         holder.temperatureView.setText(temp);
-
     }
 
-    public void updateAdapter(ArrayList<cityWeather> forecast){
+    public void updateAdapter(ArrayList<CityWeather> forecast){
+        Log.e(TAG, "in updateAdapter()");
         mForecast = forecast;
         notifyDataSetChanged();
     }

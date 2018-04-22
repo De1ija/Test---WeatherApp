@@ -1,7 +1,6 @@
-package com.example.android.weatherapp;
+package com.example.android.weatherapp.utils;
 
 import android.util.Log;
-import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,7 +15,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 
 public class QueryUtils {
@@ -27,10 +25,10 @@ public class QueryUtils {
 
     }
 
-    public static cityWeather fetchWeatherData(String weatherJson){
+    public static CityWeather fetchWeatherData(String weatherJson){
         URL weatherUrl = createUrl(weatherJson);
         String jsonResponse = null;
-        cityWeather belgradeWeather = null;
+        CityWeather belgradeWeather = null;
 
         jsonResponse = makeHttpRequest(weatherUrl);
         try{
@@ -40,7 +38,7 @@ public class QueryUtils {
             JSONArray weatherArrayJson = baseJsonResponse.getJSONArray("weather");
             JSONObject weatherDescriptionJson = weatherArrayJson.getJSONObject(0);
 
-             belgradeWeather = new cityWeather(baseJsonResponse.getString("name"),
+             belgradeWeather = new CityWeather(baseJsonResponse.getString("name"),
                     weatherMainJson.getInt("temp"), weatherMainJson.getInt("pressure"),
                     weatherMainJson.getInt("humidity"), weatherWindJson.getDouble("speed"),
                      weatherWindJson.getInt("deg"), weatherDescriptionJson.getInt("id"),
@@ -55,10 +53,10 @@ public class QueryUtils {
         return belgradeWeather;
     }
 
-    public static List<cityWeather> fetchForecastData(String weatherJson){
+    public static List<CityWeather> fetchForecastData(String weatherJson){
         URL weatherUrl = createUrl(weatherJson);
         String jsonResponse = null;
-        List<cityWeather> forecastCityWeather = new ArrayList<>();
+        List<CityWeather> forecastCityWeather = new ArrayList<>();
 
         jsonResponse = makeHttpRequest(weatherUrl);
 
@@ -72,7 +70,7 @@ public class QueryUtils {
                 JSONArray weatherArrayJson = forecastWeather.getJSONArray("weather");
                 JSONObject weatherDescriptionJson = weatherArrayJson.getJSONObject(0);
 
-                forecastCityWeather.add(new cityWeather(weatherMainJson.getInt("temp"),
+                forecastCityWeather.add(new CityWeather(weatherMainJson.getInt("temp"),
                         weatherDescriptionJson.getInt("id"), weatherDescriptionJson.getString("description"),
                         forecastWeather.getString("dt_txt")));
                 Log.e("JSON", "Inserted data");

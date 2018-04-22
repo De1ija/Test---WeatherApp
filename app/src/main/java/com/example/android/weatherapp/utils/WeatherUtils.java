@@ -1,6 +1,8 @@
-package com.example.android.weatherapp;
+package com.example.android.weatherapp.utils;
 
 import android.util.Log;
+
+import com.example.android.weatherapp.R;
 
 
 public class WeatherUtils {

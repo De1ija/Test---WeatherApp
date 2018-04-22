@@ -8,12 +8,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/background"
-            android:paddingBottom="4dp"
+            android:paddingBottom="8dp"
             android:paddingEnd="32dp"
             android:paddingLeft="32dp"
             android:paddingRight="32dp"
             android:paddingStart="32dp"
-            android:paddingTop="4dp">
+            android:paddingTop="8dp">
 
             <android.support.constraint.Guideline
                 android:id="@+id/horizontal_middle"
@@ -26,7 +26,7 @@
                 android:id="@+id/humidity_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Humidity:"
+                android:text="@string/humidity_label"
                 style="@style/TextAppearance.AppCompat.Title"
                 app:layout_constraintBottom_toTopOf="@+id/pressure_label"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="Pressure:" />
+                android:text="@string/pressure_label" />
 
             <TextView
                 android:id="@+id/pressure_textview"
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.AppCompat.Title"
-                android:text="Wind:"
+                android:text="@string/windspeed_label"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pressure_label" />
