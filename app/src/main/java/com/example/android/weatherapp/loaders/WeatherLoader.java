@@ -35,12 +35,6 @@ public class WeatherLoader extends AsyncTaskLoader<CityWeather> {
     }
 
     @Override
-    protected void onReset() {
-        Log.e(TAG, "in onReset()");
-        super.onReset();
-    }
-
-    @Override
     public void deliverResult(CityWeather data) {
         mWeatherData = data;
         super.deliverResult(data);

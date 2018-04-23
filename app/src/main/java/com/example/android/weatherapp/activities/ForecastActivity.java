@@ -58,37 +58,9 @@ public class ForecastActivity extends AppCompatActivity implements LoaderManager
     }
 
     @Override
-    protected void onResume() {
-        Log.e(TAG, "in onResume()");
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        Log.e(TAG, "in onPause()");
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        Log.e(TAG, "in onStop()");
-        super.onStop();
-    }
-
-    @Override
     public void onBackPressed() {
         Log.e(TAG, "in onBackPressed()");
         super.onBackPressed();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
     }
 
     @Override

@@ -92,35 +92,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
-    protected void onStart() {
-        Log.e(TAG, "in onStart()");
-        super.onStart();
-    }
-
-    @Override
-    protected void onResume() {
-        Log.e(TAG, "in onResume()");
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        Log.e(TAG, "in onPause()");
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        Log.e(TAG, "in onStop()");
-        super.onStop();
-    }
-
-    @Override
     public Loader<CityWeather> onCreateLoader(int i, Bundle bundle) {
         Log.e(TAG, "in onCreateLoader()");
         Uri baseUri = Uri.parse(WEATHER_REQUEST_URL);
