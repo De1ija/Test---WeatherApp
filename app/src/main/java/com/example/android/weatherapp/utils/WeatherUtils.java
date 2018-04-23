@@ -1,14 +1,13 @@
 package com.example.android.weatherapp.utils;
 
-import android.util.Log;
-
 import com.example.android.weatherapp.R;
 
 
 public class WeatherUtils {
 
     public static int CityID (int i){
-        int cityID = 0;
+        int cityID;
+
         switch(i){
             case 0:
                 cityID = 6544881;
@@ -189,7 +188,6 @@ public class WeatherUtils {
     }
 
     public static int getIconForWeatherCondition(int weatherId) {
-
         /*
          * Based on weather code data for Open Weather Map.
          */

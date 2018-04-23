@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -20,7 +19,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Choose your City:"/>
+                android:text="@string/choose_city_textview"/>
 
             <Spinner
                 android:id="@+id/city_list_spinner"
@@ -32,12 +31,11 @@
                 android:id="@+id/weather_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="show weather"
+                android:text="@string/weather_button"
                 android:background="@drawable/button_selector"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
                 android:layout_gravity="center_horizontal"/>
-
         </LinearLayout>
 
         <include
@@ -62,26 +60,14 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <!--            <TextView
-                            android:id="@+id/spinner_position_textview"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            tools:text="Spinner position" />-->
-
             <Button
                 android:id="@+id/forecast_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:background="@color/colorBackground"
+                android:background="@drawable/button_selector"
                 android:text="@string/forecast_button" />
-
-            <!--            <TextView
-                            android:id="@+id/spinner_id_textview"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            tools:text="Spinner ID" />-->
         </LinearLayout>
     </LinearLayout>
 </layout>

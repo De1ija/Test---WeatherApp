@@ -4,4 +4,6 @@
     <string name="humidity_label">Humidity:</string>
     <string name="pressure_label">Pressure:</string>
     <string name="windspeed_label">Wind Speed:</string>
+    <string name="weather_button">Show Weather</string>
+    <string name="choose_city_textview">Choose your City:</string>
 </resources>

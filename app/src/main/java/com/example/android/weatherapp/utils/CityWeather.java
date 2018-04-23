@@ -15,7 +15,7 @@ public class CityWeather {
     private String mWeatherDescription;
     private String mDate;
 
-
+    //constructor for primary weather info
     public CityWeather(String cityName, int temperature, int pressure, int humidity, double windSpeed,
                        double windDirection, int iconId, String weatherDescription){
         mCityName = cityName;
@@ -28,6 +28,7 @@ public class CityWeather {
         mWeatherDescription = weatherDescription;
     }
 
+    //constructor for forecast weather
     public CityWeather(int temperature, int iconId, String weatherDescription, String date){
         mTemperature = temperature;
         mIconId = iconId;

@@ -21,16 +21,13 @@ public class QueryUtils {
 
     public static final String LOG_TAG = QueryUtils.class.getName();
 
-    private QueryUtils(){
-
-    }
+    private QueryUtils(){}
 
     public static CityWeather fetchWeatherData(String weatherJson){
+        CityWeather cityWeather = null;
         URL weatherUrl = createUrl(weatherJson);
-        String jsonResponse = null;
-        CityWeather belgradeWeather = null;
+        String jsonResponse = makeHttpRequest(weatherUrl);
 
-        jsonResponse = makeHttpRequest(weatherUrl);
         try{
             JSONObject baseJsonResponse = new JSONObject(jsonResponse);
             JSONObject weatherMainJson = baseJsonResponse.getJSONObject("main");
@@ -38,27 +35,23 @@ public class QueryUtils {
             JSONArray weatherArrayJson = baseJsonResponse.getJSONArray("weather");
             JSONObject weatherDescriptionJson = weatherArrayJson.getJSONObject(0);
 
-             belgradeWeather = new CityWeather(baseJsonResponse.getString("name"),
+            cityWeather = new CityWeather(baseJsonResponse.getString("name"),
                     weatherMainJson.getInt("temp"), weatherMainJson.getInt("pressure"),
                     weatherMainJson.getInt("humidity"), weatherWindJson.getDouble("speed"),
                      weatherWindJson.getInt("deg"), weatherDescriptionJson.getInt("id"),
                      weatherDescriptionJson.getString("description"));
 
-
         }catch(JSONException e){
             e.printStackTrace();
-            Log.e("QueryUtils", "error fetching JSON results");
+            Log.e(LOG_TAG, "error fetching JSON results");
         }
-
-        return belgradeWeather;
+        return cityWeather;
     }
 
     public static List<CityWeather> fetchForecastData(String weatherJson){
-        URL weatherUrl = createUrl(weatherJson);
-        String jsonResponse = null;
         List<CityWeather> forecastCityWeather = new ArrayList<>();
-
-        jsonResponse = makeHttpRequest(weatherUrl);
+        URL weatherUrl = createUrl(weatherJson);
+        String jsonResponse = makeHttpRequest(weatherUrl);
 
         try{
             JSONObject baseJsonResponse = new JSONObject(jsonResponse);
@@ -75,12 +68,10 @@ public class QueryUtils {
                         forecastWeather.getString("dt_txt")));
                 Log.e("JSON", "Inserted data");
             }
-
         }catch(JSONException e){
             e.printStackTrace();
             Log.e("QueryUtils", "error fetching JSON results");
         }
-
         return forecastCityWeather;
     }
 
@@ -99,7 +90,7 @@ public class QueryUtils {
             urlConnection.setConnectTimeout(15000);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
-            Log.e("IN makeHttpRequest", "connecting to network");
+            Log.e("In makeHttpRequest()", "connecting to network");
 
             if(urlConnection.getResponseCode() == 200){
                 inputStream = urlConnection.getInputStream();

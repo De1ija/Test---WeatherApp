@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:background="@color/colorBackground">
 
-
         <android.support.constraint.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
@@ -20,8 +19,8 @@
 
         <ImageView
             android:id="@+id/icon_id_imageview"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="@dimen/primary_weather_icon_size"
+            android:layout_height="@dimen/primary_weather_icon_size"
             android:adjustViewBounds="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/guideline"
@@ -33,7 +32,7 @@
             android:id="@+id/cityName_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/primary_weather_city_name_bottom_margin"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/icon_id_imageview"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -44,7 +43,7 @@
             android:id="@+id/weather_description_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/primary_weather_description_margin"
             android:textColor="@color/tempColor"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/icon_id_imageview"

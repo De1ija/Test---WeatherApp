@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         AdapterView.OnItemSelectedListener{
 
     private static final String TAG = "MainActivity";
-/*    public static final String WEATHER_REQUEST_URL =
-            "http://api.openweathermap.org/data/2.5/weather?id=792680&appid=9332634f1dc13a4d89bb8ad9bbe8fe38&units=metric";*/
+
     public static final String WEATHER_REQUEST_URL = "http://api.openweathermap.org/data/2.5/weather";
     private static final int WEATHER_LOADER_ID = 1;
 
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mExtraWeaherDetails.setVisibility(View.INVISIBLE);
         mPrimaryWeatherInfo.setVisibility(View.INVISIBLE);
         mForecastButtonLayout.setVisibility(View.INVISIBLE);
-
 
         ArrayAdapter<String> cityListAdapter = new ArrayAdapter<>
                 (this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.city_list));

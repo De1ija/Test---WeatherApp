@@ -67,10 +67,10 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
         public ForecastAdapterViewHolder(View view){
             super(view);
-            iconView = (ImageView) view.findViewById(R.id.weather_icon);
-            dateView = (TextView) view.findViewById(R.id.date);
-            descriptionView = (TextView) view.findViewById(R.id.weather_description);
-            temperatureView = (TextView) view.findViewById(R.id.temperature);
+            iconView = view.findViewById(R.id.weather_icon);
+            dateView = view.findViewById(R.id.date);
+            descriptionView = view.findViewById(R.id.weather_description);
+            temperatureView = view.findViewById(R.id.temperature);
 
         }
     }
